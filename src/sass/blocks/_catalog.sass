@@ -1,0 +1,164 @@
+.catalog
+    padding-bottom: 103px
+    &__title
+        +title
+        line-height: 22px
+    &__tabs
+        margin: 0 auto
+        width: 660px
+        margin-top: 69px
+        list-style-type: none
+        display: flex
+        justify-content: space-between
+        transform: translateX(-18px)
+
+    &__tab
+        width: 200px
+        height: 50px
+        border: solid 2px #d0d0d0
+        font-family: $Medium
+        font-size: 18px
+        line-height: 50px
+        text-align: center
+        color: #6b6b6b 
+        text-transform: uppercase
+        transform: skewX(-23deg)
+        cursor: pointer
+        transition: 0.5s all
+        &:hover
+            box-shadow: 2px 2px 20px $Button
+            border: none
+        div
+            transform: skewX(23deg)
+    
+        &_active
+            color: $White
+            background-color: $Button
+            border: none
+
+                                            // Стилизация Контента вкладок
+
+    &__content
+        margin-top: 59px
+        display: none
+        flex-wrap: wrap
+        justify-content: space-between
+        &_active
+            display: flex
+    
+    &-item
+        width: 300px
+        min-height: 440px
+        border: solid 2px #e8e8e8
+        padding: 20px 20px 26px 20px
+        overflow: hidden
+        margin-bottom: 21px
+        &__img
+            max-width: 100%
+            height: 200px
+            display: block
+            margin: 0 auto
+        &__subtitle
+            margin-top: 20px
+            font-family: $Bold
+            font-size: 16px
+            line-height: 15px
+            text-align: center
+            color: #0d0d0d
+        &__descr
+            margin-top: 16px
+            font-family: $Light
+            font-size: 14px
+            line-height: 17px
+            text-align: center
+            color: #0d0d0d
+        &__link
+            display: block
+            margin-top: 17px
+            font-family: $Medium
+            font-size: 14px
+            line-height: 14px
+            text-align: center
+            color: #c70101
+            text-decoration: underline
+            &:hover
+                color: #c70101
+        hr 
+            background-color: #e8e8e8
+            margin: 19px 0 21px 0
+            border-bottom: none
+        &__footer
+            display: flex
+            justify-content: space-between
+        &__old-price
+            font-family: $Light
+            font-size: 14px
+            line-height: 13px
+            text-align: left
+            color: #555555
+            text-decoration: line-through
+        &__price
+            margin-top: 9px
+            font-family: $Bold
+            font-size: 20px
+            line-height: 19px
+            text-align: left
+            color: #050505
+        
+        &__wrapper
+            display: flex
+            width: calc(200% + 40px)
+            
+        &__content
+            width: 50%
+            margin-right: 0
+            transform: translateX(-100%)
+            transition: 0.5s all
+            &_active
+                transform: translateX(0%)
+                margin-right: 20px
+        &__list
+            width: 50%
+            margin-left: 20px
+            transform: translateX(0%)
+            padding-right: 20px
+            transition: 0.5s all
+            padding-left: 19px
+            margin-bottom: 0
+            list-style-type: none
+            &_active
+                transform: translateX(-100%)
+                margin-left: 0
+            li
+                position: relative
+                font-family: $Light
+                font-size: 14px
+                line-height: 20px
+                text-align: left
+                color: #555555
+                margin-bottom: 22px
+                &::before
+                    content: ''
+                    position: absolute
+                    width: 5px
+                    height: 5px
+                    background-color: $Button
+                    left: -14px
+                    top: 6px
+        &__back
+            position: absolute
+            bottom: 0
+            left: 50%
+            transform: translateX(calc( -50% - 19px ))
+            display: block
+            margin-top: 17px
+            font-family: $Medium
+            font-size: 14px
+            line-height: 14px
+            text-align: center
+            color: #c70101
+            text-decoration: underline
+            text-transform: uppercase
+            &:hover
+                color: #c70101
+
