@@ -4,15 +4,16 @@ $(document).ready(function(){
         adaptiveHeight: false,
         prevArrow: '<button type="button" class="slick-prev"><img src="../img/icons/chevron_left.png"></button>',
         nextArrow: '<button type="button" class="slick-next"><img src="../img/icons/chevron_right.png"></button>',
-        responcive: [
+        responsive: [
             {
-                breakpoint: 768,
-                settings: {
+              breakpoint: 991,
+              settings: {
                 dots: true,
-                arrows: false
-                }
+              }
             },
-        ]       
+            
+          ]
+             
       });
 
     $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
@@ -20,6 +21,8 @@ $(document).ready(function(){
             .addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
             .closest('div.container').find('div.catalog__content').removeClass('catalog__content_active').eq($(this).index()).addClass('catalog__content_active');
     });
+
+    
 
     // $('.catalog-item__link').each(function(i){
     //     $(this).on('click', function(e){
@@ -49,4 +52,22 @@ $(document).ready(function(){
 
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back');
+
+    // Modal
+
+    $('[data-modal=consultation]').on('click', function() {
+        $('.overlay, #consultation').fadeIn('slow');
+    });
+
+    $('.modal__close').on('click', function() {
+        $('.overlay, #consultation, #order, #thanks').fadeOut('slow');
+    });
+
+    $('.button_mini').each(function(i) {
+        $(this).on('click', function() {
+            $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+            $('.overlay, #order').fadeIn('slow');
+        });
+    });
+
   });

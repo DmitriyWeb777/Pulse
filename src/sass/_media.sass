@@ -29,6 +29,50 @@
             align-self: center
             text-align: center
 
+    .carousel
+        &__inner
+            width: 90vw
+            img
+                width: 100%
+        .slick-prev, .slick-next
+            display: none
+            img
+                display: none
+        // &__dots
+        //     display: flex
+        // &__dot 
+        //     display: flex
+        //     position: relative
+        //     text-align: center
+        //     margin: 24px 0
+    .slick-dots
+        display: flex
+        justify-content: center
+        margin: 0
+        padding: 10px 0
+        list-style-type: none
+        li
+            margin: 0 20px
+        button
+            display: block
+            width: 10px
+            height: 10px
+            padding: 0
+            border: none
+            border-radius: 100%
+            background-color: #e0e0e0
+            text-indent: -9999px
+        li.slick-active button
+            background-color: #000000
+    
+    .catalog
+        &__content
+            width: 630px
+            margin: 59px auto 0 auto
+    .responce
+        &__content
+            padding-right: 0
+
 @media screen and (max-width: 767px)
     .header
         &__logo
@@ -52,6 +96,9 @@
             width: 100%
             height: 55px
             font-size: 16px
+        &_mini
+            height: 40px
+            font-size: 14px
 
     .promo
         &__header
@@ -77,6 +124,23 @@
             align-items: center
         &__descr
             text-align: center
+
+    .catalog
+        &__title
+            font-size: 24px
+        &__tabs
+            width: 510px
+        &__tab
+            width: 150px
+            height: 30px
+            line-height: 30px
+            font-size: 15px
+        &__content
+            flex-wrap: wrap
+            width: 80vw
+        .catalog-item
+            margin: 0 auto 21px auto
+            
         
 @media screen and (max-width: 575px)
     .header
@@ -122,3 +186,60 @@
         &__descr
             font-size: 18px
             margin-top: 39px
+
+    .carousel
+        padding: 30px 0
+
+    .catalog
+        padding-bottom: 50px
+        &__title
+            font-size: 18px
+        &__tabs
+            width: 70vw
+            flex-flow: column
+            height: 110px
+            margin-top: 30px
+        &__tab
+            width: 100%
+            font-size: 13px
+    .responce
+        &__title
+            font-size: 18px
+        &__item
+            flex-flow: column
+            padding: 30px 0
+            img
+                height: 100px
+                width: 100px
+                align-self: center
+        &__name, &__achievment
+            text-align: center
+            margin-top: 20px
+        &__content
+            margin-left: 20px
+        &__descr
+
+    .catalog-item
+        &__descr
+            display: block
+            width: 190px
+            margin: 10px auto 0 auto
+            font-size: 11px
+        &__list
+            li
+                font-size: 12px
+                margin-bottom: 8px
+        &__price
+            font-size: 18px
+    
+    .footer
+        &__addr
+            font-size: 15px
+        &__phone
+            font-size: 15px
+            margin-top: 15px
+        &__info
+            width: 100vw
+            height: 220px
+
+        
